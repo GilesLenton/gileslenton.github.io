@@ -1,0 +1,16 @@
+// Navigation
+header nav {
+  //left: calc((1600px - 960px)/2 + (.833 * 960px) + (0.04 * 960px));
+}
+
+// Title
+.title {
+  .title-image {
+    width: calc(((1600px - 960px)/2) + (.833 * 960px));
+    margin-left: calc((100% - 1600px)/2);
+
+    &.even {
+      margin-left: calc((100% - 960px)/2 + (.167 * 960px));
+    }
+  }
+}

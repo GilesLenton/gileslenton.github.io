@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body>
+    {% include header.html %}
+
+    <main id="panel" class="page-content">
+      <!--<div class="wrapper">-->
+      <div id="container">
+        {{ content }}
+
+        {% for post in site.posts reversed %}
+          {% include {{post.template}} post=post %}
+        {% endfor %}
+      </div>
+      <!--</div>-->
+    </main>
+
+    <script src="{{ "/js/load.js" | prepend: site.baseurl }}"></script>
+    <script src="{{ "/js/disablehover.js" | prepend: site.baseurl }}"></script>
+    <script src="{{ "/js/slideout.min.js" | prepend: site.baseurl }}"></script>
+    <script src="{{ "/js/jump.min.js" | prepend: site.baseurl }}"></script>
+    <script src="{{ "/js/layzr.min.js" | prepend: site.baseurl }}"></script>
+  </body>
+
+</html>

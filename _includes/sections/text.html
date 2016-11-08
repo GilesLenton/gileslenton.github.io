@@ -1,0 +1,23 @@
+{% assign postTitle = post.title | remove: ' &<br/>' | replace: ' ', '_' | downcase %}
+
+<section id="{{ postTitle }}" class="waypoint">
+  <header class="title">
+    <div class="wrapper">
+      <h1>{{ post.title }}</h1>
+    </div>
+
+    <div class="title-image {% cycle 'odd', 'even' %}">
+      <div class="title-image-inner">
+        <img data-normal="/images/sections/1280x{{post.image}}.jpg"
+             data-retina="/images/sections/1920x{{post.image}}.jpg"
+             data-srcset="/images/sections/1280x{{post.image}}.jpg 1280w, /images/sections/1920x{{post.image}}.jpg 1920w">
+      </div>
+    </div>
+  </header>
+
+  <div class="wrapper">
+    <article class="body">
+      {{ post.content }}
+    </article>
+  </div>
+</section>

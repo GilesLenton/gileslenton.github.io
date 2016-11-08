@@ -1,0 +1,63 @@
+html, body {
+  font-size: 17px;
+}
+
+#panel {
+  padding-top: 0;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+// Clients
+.client-list {
+  li {
+    width: calc(100%);
+    margin-right: 0;
+    padding-top: .5rem;
+    margin-bottom: .5rem;
+    border-top: 1px solid $grey;
+
+    &:nth-of-type(2n) {
+      margin-right: 0;
+    }
+  }
+}
+
+// Wrapper
+.wrapper {
+  width: calc(100% - 5rem);
+}
+
+// Text
+.body {
+  margin-left: 0;
+  @include grid-width(12);
+  margin-bottom: 4rem;
+}
+
+// Title
+.title {
+  .title-image {
+    width: calc(((100% - (100%-5rem))/2) + (.833 * (100%-5rem)));
+
+    &.even {
+      margin-left: calc((100% - (100%-5rem))/2 + (.167 * (100%-5rem)));
+    }
+  }
+}
+
+#insight_strategy {
+  h1 {
+    top: initial;
+    bottom: 0;
+    @include translateY(65%);
+  }
+
+  .body {
+    margin-top: 6rem;
+  }
+
+  .title-image { width: 100%; margin-left: 0;}
+}

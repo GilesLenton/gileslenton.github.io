@@ -1,0 +1,19 @@
+html, body {
+  font-size: 22px;
+}
+
+// Wrapper
+.wrapper {
+  width: calc(100% - 4rem);
+}
+
+// Title
+.title {
+  .title-image {
+    width: calc(((100% - (100%-4rem))/2) + (.833 * (100%-4rem)));
+
+    &.even {
+      margin-left: calc((100% - (100%-4rem))/2 + (.167 * (100%-4rem)));
+    }
+  }
+}

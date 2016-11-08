@@ -1,0 +1,44 @@
+//Grid
+$total_columns : 12;
+$gutter_width :  4%;
+
+@mixin grid-width($i) {
+  width: get-col-width($i);
+}
+
+@mixin offset($i) {
+  margin-left: get-col-width($i)+$gutter_width;
+}
+
+@function get-col-width($cols){
+  @return (100% - ($total_columns/$cols - 1) * $gutter_width) / $total_columns * $cols;
+}
+
+@function get-offset($cols){
+  @return ((100% - ($total_columns/$cols - 1) * $gutter_width) / $total_columns * $cols)+$gutter_width;
+}
+
+// translate
+@mixin translate ($x, $y) {
+   @include transform(translate($x, $y));
+}
+
+@mixin translateY ($y) {
+   @include transform(translateY($y));
+}
+
+@mixin translateX ($x) {
+   @include transform(translateX($x));
+}
+
+@mixin translate3d ($x, $y, $z) {
+   @include transform(translate3d($x, $y, $z));
+}
+
+@mixin transform($transforms) {
+	   -moz-transform: $transforms;
+	     -o-transform: $transforms;
+	    -ms-transform: $transforms;
+	-webkit-transform: $transforms;
+          transform: $transforms;
+}

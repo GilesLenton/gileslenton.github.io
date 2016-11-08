@@ -1,0 +1,15 @@
+<div id="clients" class="wrapper waypoint">
+  <h1>{{ post.title }}</h1>
+</div>
+
+<div class="wrapper">
+  <article class="body">
+    <ul class="client-list">
+      {% assign sorted_clients = site.data.clients.clients | sort %}
+
+      {% for client in sorted_clients %}
+        <li>{{ client }}</li>
+      {% endfor %}
+    </ul>
+  </article>
+</div>
