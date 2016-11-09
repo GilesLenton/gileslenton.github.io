@@ -2,9 +2,10 @@
 title: Experience
 template: sections/text.html
 image: 4
+published: true
 ---
 
-Over x years we have enjoyed working with the best - brand owners, businesses, advertising agencies and design agencies.
+Over many years we have enjoyed working with the best - brand owners, businesses, advertising agencies and design agencies.
 
 All share a genuine interest in consumer insight – they really do put the consumer/customer at the heart of their business and know that this directly contributes to their bottom lines.
 
