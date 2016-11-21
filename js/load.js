@@ -8,11 +8,8 @@ var images = document.getElementsByClassName('fade-img')
 
 Array.prototype.forEach.call(images, function(e) {
   function loaded(image) {
-    console.log(image);
     image.parentNode.classList.add('fadein');
   }
-
-  console.log(e);
 
   if (e.complete) {
     loaded(e);
