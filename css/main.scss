@@ -27,7 +27,10 @@ $grey: #363636;
 
 @font-face {
   font-family: 'Druk';
-  src: url('../fonts/Druk-Medium.woff');
+  src: url('../fonts/Druk-Medium-Web.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/Druk-Medium-Web.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/Druk-Medium-Web.woff2') format('woff2'),
+       url('../fonts/Druk-Medium-Web.woff') format('woff');
   font-weight: 400;
   font-style: normal;
 }
